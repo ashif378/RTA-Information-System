@@ -1,0 +1,482 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{D95D2F7A-B98B-48C6-9FA1-6E31A06EE82D}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>RTA_Information_System</RootNamespace>
+    <AssemblyName>RTA Information System</AssemblyName>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <StartupObject>
+    </StartupObject>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>icon.ico</ApplicationIcon>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x64'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x64\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x64'">
+    <OutputPath>bin\x64\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x64</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
+    <Prefer32Bit>true</Prefer32Bit>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="add_emp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="add_emp.Designer.cs">
+      <DependentUpon>add_emp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_loginDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>admin_loginDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="challan_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="challan_view.Designer.cs">
+      <DependentUpon>challan_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_loginDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>employee_loginDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="emp_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="emp_view.Designer.cs">
+      <DependentUpon>emp_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="home.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="home.Designer.cs">
+      <DependentUpon>home.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parma_lic_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parma_lic_list.Designer.cs">
+      <DependentUpon>parma_lic_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parma_renew_lic.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parma_renew_lic.Designer.cs">
+      <DependentUpon>parma_renew_lic.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LLR_renew_list.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LLR_renew_list.Designer.cs">
+      <DependentUpon>LLR_renew_list.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_login.Designer.cs">
+      <DependentUpon>employee_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_login.Designer.cs">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="admin_panel.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="admin_panel.Designer.cs">
+      <DependentUpon>admin_panel.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_info.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_info.Designer.cs">
+      <DependentUpon>employee_info.cs</DependentUpon>
+    </Compile>
+    <Compile Include="employee_service.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="employee_service.Designer.cs">
+      <DependentUpon>employee_service.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LLR_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LLR_form.Designer.cs">
+      <DependentUpon>LLR_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LLR_renew_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LLR_renew_form.Designer.cs">
+      <DependentUpon>LLR_renew_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="permanent_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="permanent_form.Designer.cs">
+      <DependentUpon>permanent_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="parmanent_renew_form.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="parmanent_renew_form.Designer.cs">
+      <DependentUpon>parmanent_renew_form.cs</DependentUpon>
+    </Compile>
+    <Compile Include="challan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="challan.Designer.cs">
+      <DependentUpon>challan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="LLR_view.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="LLR_view.Designer.cs">
+      <DependentUpon>LLR_view.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Issue_of_Challan_formDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Issue_of_Challan_formDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LLR_detail_formDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LLR_detail_formDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LLR_detail_formDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LLR_detail_formDataSet1.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="LLR_RenewDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>LLR_RenewDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="OleDbAdapter.cs" />
+    <Compile Include="Payment_Details_of_Challan_DatabaseDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Payment_Details_of_Challan_DatabaseDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Permanent_LicenceDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Permanent_LicenceDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Permanent_Licence_RenewDataSet.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Permanent_Licence_RenewDataSet.xsd</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="add_emp.resx">
+      <DependentUpon>add_emp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="challan_view.resx">
+      <DependentUpon>challan_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="emp_view.resx">
+      <DependentUpon>emp_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="home.resx">
+      <DependentUpon>home.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parma_lic_list.resx">
+      <DependentUpon>parma_lic_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parma_renew_lic.resx">
+      <DependentUpon>parma_renew_lic.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LLR_renew_list.resx">
+      <DependentUpon>LLR_renew_list.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_login.resx">
+      <DependentUpon>employee_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_login.resx">
+      <DependentUpon>admin_login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="admin_panel.resx">
+      <DependentUpon>admin_panel.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_info.resx">
+      <DependentUpon>employee_info.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="employee_service.resx">
+      <DependentUpon>employee_service.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LLR_form.resx">
+      <DependentUpon>LLR_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LLR_renew_form.resx">
+      <DependentUpon>LLR_renew_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="permanent_form.resx">
+      <DependentUpon>permanent_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="parmanent_renew_form.resx">
+      <DependentUpon>parmanent_renew_form.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="challan.resx">
+      <DependentUpon>challan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="LLR_view.resx">
+      <DependentUpon>LLR_view.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <None Include="admin_loginDataSet.xsc">
+      <DependentUpon>admin_loginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="admin_loginDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>admin_loginDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="admin_loginDataSet.xss">
+      <DependentUpon>admin_loginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="employee_loginDataSet.xsc">
+      <DependentUpon>employee_loginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="employee_loginDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>employee_loginDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="employee_loginDataSet.xss">
+      <DependentUpon>employee_loginDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Issue_of_Challan_formDataSet.xsc">
+      <DependentUpon>Issue_of_Challan_formDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Issue_of_Challan_formDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Issue_of_Challan_formDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Issue_of_Challan_formDataSet.xss">
+      <DependentUpon>Issue_of_Challan_formDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LLR_detail_formDataSet.xsc">
+      <DependentUpon>LLR_detail_formDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LLR_detail_formDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LLR_detail_formDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LLR_detail_formDataSet.xss">
+      <DependentUpon>LLR_detail_formDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LLR_detail_formDataSet1.xsc">
+      <DependentUpon>LLR_detail_formDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LLR_detail_formDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LLR_detail_formDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LLR_detail_formDataSet1.xss">
+      <DependentUpon>LLR_detail_formDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="LLR_RenewDataSet.xsc">
+      <DependentUpon>LLR_RenewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="LLR_RenewDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>LLR_RenewDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="LLR_RenewDataSet.xss">
+      <DependentUpon>LLR_RenewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Payment_Details_of_Challan_DatabaseDataSet.xsc">
+      <DependentUpon>Payment_Details_of_Challan_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Payment_Details_of_Challan_DatabaseDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Payment_Details_of_Challan_DatabaseDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Payment_Details_of_Challan_DatabaseDataSet.xss">
+      <DependentUpon>Payment_Details_of_Challan_DatabaseDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Permanent_LicenceDataSet.xsc">
+      <DependentUpon>Permanent_LicenceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Permanent_LicenceDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Permanent_LicenceDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Permanent_LicenceDataSet.xss">
+      <DependentUpon>Permanent_LicenceDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Permanent_Licence_RenewDataSet.xsc">
+      <DependentUpon>Permanent_Licence_RenewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Permanent_Licence_RenewDataSet.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>Permanent_Licence_RenewDataSet.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="Permanent_Licence_RenewDataSet.xss">
+      <DependentUpon>Permanent_Licence_RenewDataSet.xsd</DependentUpon>
+    </None>
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="admin_login.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="employee_login.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="icon.ico" />
+    <Content Include="Issue_of_Challan_form.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LLR_detail_form.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="LLR_Renew.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Payment_Details_of_Challan_Database.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Permanent_Licence.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+    <Content Include="Permanent_Licence_Renew.accdb">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Content>
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.6.1">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4.6.1 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
